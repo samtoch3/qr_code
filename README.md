@@ -6,3 +6,5 @@ Réalisation d'un programme python qui génère les QR Code et qui analyse celle
 ``pip install opencv-python``
 ``pip install pyzbar``
 
+
+### Read the documentation of qrcode on pypi.org
