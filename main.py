@@ -55,7 +55,7 @@ def read_qrcode_on_image(path_img):
         print('Données du QR Code : ', code.data.decode('utf-8'))
 
 
-def read_qrcode_on_camera():
+def read_qrcode_or_code_barre_on_camera():
     cap = cv2.VideoCapture(0)
     cap.set(3, 640)  # 3 - width
     cap.set(4, 480)  # 4 - height
@@ -91,3 +91,11 @@ def generate_barre_code_in_png(data):
     hr = barcode.get_barcode_class('code39')
     r = hr(data, writer=ImageWriter())
     r.save('code_barre')
+    
+   
+def read_code_barre(path_img):
+    img = cv2.imread(path_img)
+    for code in img:
+        print(f'Type : {code.type}')
+        print('Données du QR Code : ', code.data.decode('utf-8'))
+
